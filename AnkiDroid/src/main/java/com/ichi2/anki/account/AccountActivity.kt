@@ -24,6 +24,11 @@ import com.ichi2.anki.SingleFragmentActivity
 import com.ichi2.anki.isLoggedIn
 
 class AccountActivity : SingleFragmentActivity() {
+    override fun onCreate(savedInstanceState: android.os.Bundle?) {
+        super.onCreate(savedInstanceState)
+        showedActivityFailedScreen(savedInstanceState)
+    }
+
     companion object {
         /** Sees if we want to go back to the DeckPicker after login*/
         const val START_FROM_DECKPICKER = "START_FOR_RESULT"
